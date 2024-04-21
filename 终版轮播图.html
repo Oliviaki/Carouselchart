@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>终版轮播图</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    .clearfix::after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .clearfix {
+        zoom: 1;
+    }
+
+    .outer {
+        position: relative;
+        width: 604px;
+        height: 298px;
+        margin: 100px auto;
+        overflow: hidden;
+    }
+
+    .outer .before {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: #fff;
+        font-weight: 700;
+        background-color: rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        border-radius: 0 15px 15px 0;
+    }
+
+    .outer .before:hover {
+        color: pink;
+    }
+
+    .outer .after {
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: #fff;
+        font-weight: 700;
+        background-color: rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        border-radius: 15px 0 0 15px;
+    }
+
+    .outer .after:hover {
+        color: pink;
+    }
+
+    .outer .bottom {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        /* width: 100px; */
+        height: 20px;
+        padding: 2px;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+    }
+
+    .outer .bottom ul li {
+        float: left;
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: #fff;
+    }
+
+    .outer .bottom .current {
+        background-color: pink;
+    }
+
+    .outer .bottom ul li:last-child {
+        margin-right: 0;
+    }
+
+    .inner {
+        position: absolute;
+        z-index: -90;
+        top: 0px;
+        left: 0px;
+        /* width: 3020px; */
+        height: 298px;
+    }
+
+    .inner ul li {
+        float: left;
+    }
+
+    ul li a img {
+        width: 604px;
+        height: 298px;
+    }
+</style>
+<script src="./animate.js"></script>
+<script src="./终版轮播图.js"></script>
+
+<body>
+    <div class="outer">
+        <span class="before">&lt;</span>
+        <div class="inner">
+            <ul>
+                <li>
+                    <a href="javascript:;"><img src="./image/3c993ede122ef6a98fe9fe3f8f46a358.jpeg" alt=""></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./image/6e1d41ddb62abc0a6939c0b0f4cf0766.jpeg" alt=""></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./image/cf96dcef54360fa5962627370bca5484.jpeg" alt=""></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./image/d3a643a08fb6237d53c26facc7d88349.jpeg" alt=""></a>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="./image/eb5486e2dfc48f5c593c5b04bd52bd3f.jpeg" alt=""></a>
+                </li>
+            </ul>
+        </div>
+        <span class="after">&gt;</span>
+        <div class="bottom">
+            <ul>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
